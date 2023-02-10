@@ -6,7 +6,11 @@ lazy val root = project
     name := "$name$",
     version := "0.1.0-SNAPSHOT",
 
-    scalaVersion := scala3Version,
-
-    libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
+    scalacOptions ++= Seq(
+      "-deprecation",
+      "-explain"
+    ),
+    
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % Test,
+    libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.15.4" % Test
   )
