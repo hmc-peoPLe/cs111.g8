@@ -6,6 +6,8 @@ lazy val root = project
     name := "$name$",
     version := "0.1.0-SNAPSHOT",
 
+    scalaVersion := scala3Version,
+
     scalacOptions ++= Seq(
       "-deprecation",
       "-explain"
